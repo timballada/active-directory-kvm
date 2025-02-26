@@ -1,8 +1,12 @@
 # Running Active Directory with KVM
 
-<!-- Brief Summary/Explanation-->
+Include Brief Summary/Explanation
+
+---
 
 ### Initial Setup (Ubuntu/Debian):
+
+---
 
 Verify CPU supports virtualization:
 
@@ -30,7 +34,7 @@ KVM acceleration can be used
 
 Install Virt-Manager (GUI for KVM):
 
-```
+```sh
 sudo apt install virt-manager
 ```
 
@@ -41,31 +45,37 @@ If this does not work on your system or you would like a different set of packag
 - https://sysguides.com/install-kvm-on-linux
 - https://phoenixnap.com/kb/ubuntu-install-kvm
 
+---
+
 ### Network Configuration
+
+---
 
 Load into Virt-Manager by typing `virt-manager` in the terminal or finding it in the applications menu.
 
-On the top bar click ```Edit``` then ```Preferences```.
+On the top bar click `Edit` then `Preferences`.
 
-In the ```General``` section toggle the checkmark to ```Enable XML editing```, then close out of ```Preferences```.
+In the `General` section toggle the checkmark to `Enable XML editing`, then close out of `Preferences`.
 
 ![image](https://github.com/user-attachments/assets/e8476f55-2027-4616-9e56-3044b915ade3) ![image](https://github.com/user-attachments/assets/785877a4-57c0-45bc-9aee-85d85ca3953f)
 
-Select ```Edit``` again, then ```Connection Details```.
+---
 
-You should have a default ```NAT``` connection that looks similar to this. 
+Select `Edit` again, then `Connection Details`.
+
+You should have a default `NAT` connection like this:
 
 ![image](https://github.com/user-attachments/assets/153de4c0-a915-4b85-848d-0cc25e004b42) ![image](https://github.com/user-attachments/assets/1ec84aa7-5d68-41cb-bd9e-bccae0963e0b)
 
-
-
 At the bottom of the window click the `+` button to add a new network.
 
-<!-- 4step -->
+![image](https://github.com/user-attachments/assets/f8aa9dce-7561-4a20-a58b-7717bfb8f618)
 
 Name it 'internal-network, set the mode to 'Isolated', and click Finish.
 
-<!-- 5step -->
+![image](https://github.com/user-attachments/assets/99676123-d2ef-42d7-a716-c7c575235921)
+
+---
 
 Make sure 'internal-network' is selected, then press the red 'x' to stop the network and allow editing.
 
