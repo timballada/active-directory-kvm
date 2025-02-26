@@ -44,21 +44,20 @@ If this does not work on your system or you would like a different set of packag
 ### Network Configuration
 
 Load into Virt-Manager by typing `virt-manager` in the terminal or finding it in the applications menu.
-It should open into the manager window, as shown below: 
+
+On the top bar click ```Edit``` then ```Preferences```.
+
+In the ```General``` section toggle the checkmark to ```Enable XML editing```, then close out of ```Preferences```.
+
+![image](https://github.com/user-attachments/assets/e8476f55-2027-4616-9e56-3044b915ade3) ![image](https://github.com/user-attachments/assets/785877a4-57c0-45bc-9aee-85d85ca3953f)
+
+Select ```Edit``` again, then ```Connection Details```.
+
+You should have a default ```NAT``` connection that looks similar to this. 
+
+![image](https://github.com/user-attachments/assets/153de4c0-a915-4b85-848d-0cc25e004b42) ![image](https://github.com/user-attachments/assets/1ec84aa7-5d68-41cb-bd9e-bccae0963e0b)
 
 
-
-|On the top bar click 'Edit' then 'Preferences'.| In the 'General' section toggle the checkmark to 'Enable xml editing'.|
-|---|---|
-|![image](https://github.com/user-attachments/assets/e8476f55-2027-4616-9e56-3044b915ade3)|![image](https://github.com/user-attachments/assets/785877a4-57c0-45bc-9aee-85d85ca3953f)|
-
-
-
-On the top bar click 'Edit' then 'Connection Details'
-
-You should have a default 'NAT' connection that looks similar to this.
-
-<!-- 2step | 3step -->
 
 At the bottom of the window click the `+` button to add a new network.
 
