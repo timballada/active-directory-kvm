@@ -1,7 +1,5 @@
 # Running Active Directory with KVM
 
-<!-- ## Configure KVM and Virt-Manager -->
-
 ### Initial Setup (Ubuntu/Debian):
 
 Verify CPU supports virtualization:
