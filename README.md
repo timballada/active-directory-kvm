@@ -77,14 +77,16 @@ Name it 'internal-network, set the mode to 'Isolated', and click Finish.
 
 ---
 
-Make sure 'internal-network' is selected, then press the red 'x' to stop the network and allow editing.
+In the `Connection Details` window, select the new `internal-network`, then press the red 'x' to stop the network and allow editing.
 
-<!-- 6step -->
+![image](https://github.com/user-attachments/assets/cbb6d78e-b3d3-45ed-9bed-1852803d9d7b)
 
-Click on the 'XML' tab and remove all of the elements selected below.
+Click on the `XML` tab and delete all of the elements selected below.
 This will disable automatic ip addressing from the DHCP server.
 
-<!-- 7step -->
+![image](https://github.com/user-attachments/assets/a201ebad-e688-4976-aceb-0d4bd6344df3)
+
+Click `Apply` in the bottom right corner to save the changes.
 
 Your final XML should look similar to this:
 
@@ -97,6 +99,11 @@ Your final XML should look similar to this:
 </network>
 
 ```
+Click the `▶` button to reactivate the internal network.
+
+![image](https://github.com/user-attachments/assets/10fe0a3f-add6-4c0d-b7c0-3fc4b2610476)
+
+---
 
 ### Provisioning Virtual Machines
 
