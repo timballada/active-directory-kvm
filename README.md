@@ -107,6 +107,8 @@ Click the `▶` button to reactivate the internal network.
 
 ### Provisioning Virtual Machines
 
+---
+
 Download these two iso images from the sites below:
 
 - [Windows Server 2019](https://www.microsoft.com/en-us/evalcenter/download-windows-server-2019)
