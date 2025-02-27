@@ -113,3 +113,57 @@ Download these two iso images from the sites below:
 
 - [Windows Server 2019](https://www.microsoft.com/en-us/evalcenter/download-windows-server-2019)
 - [Windows 10](https://www.microsoft.com/en-us/software-download/windows10ISO)
+
+
+#### Windows Server 2019
+
+In Virt-Manager, click the `create a new virtual machine` button and follow steps below:
+
+<!--8step-->
+<!--9step-->
+
+The option for auto detecting the iso media type is usually selected by default.
+Toggle off that option, manually type in the OS, and it will give an autocompletion for you to select
+, e.g. `Microsoft Windows Server 2019 (win2k19)`
+
+<!--10step-->
+
+Select a RAM and CPU amount for both virtual machines that your PC can handle when they are both running.
+
+For example I have 32GB RAM and 24 CPU cores, and gave each of my VMs 8GB and 4 cores.
+
+<!--11step-->
+
+Be cautious how many cores you provision. The GUI is misleading by saying I have "24" CPUs
+available, but that is actually my TOTAL amount of processing units. Type the command `lscpu` in
+the terminal. Multiply the values of `Core(s) per socket:` and `Socket(s):` to find the amount of "physical cores" in your PC.
+The general rule is to use 50-75% of your PC's physical cores for VMs.
+
+<!--12step-->
+
+Provide a minimum of 30GB for the VM. Make sure the network is on the default: 'NAT'. Toggle the option to customize
+before install, then click `Finish`.
+
+<!--13step-->
+
+Click the `Add Hardware` button at the bottom of the window. This will open another window to add
+virtual hardware. Go to `Network` and select the isolated network we created as the source.
+
+<!--14step-->
+
+You will now see two virtual "NICs", one for accessing the internet and one for an "internal" connection between
+the VMs.
+
+<!--15step-->
+
+Select `Begin Installation` in the top right to launch the VM.
+
+Click `Next` and `Install Now` then select either of the `Desktop Experience` OS options before continuing.
+
+<!--16step-->
+
+Accept "TOS" and select the `Custom Install` option and `Next` to start installing. Select an easy and memorable
+password as this is just a lab. Click the `Send Key` button on the top bar and `Ctl+Alt+Delete` to login.
+
+<!--17step-->
+
