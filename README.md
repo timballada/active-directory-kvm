@@ -163,3 +163,107 @@ password as this is just a lab. Click the `Send Key` button on the top bar and `
 
 ![image](https://github.com/user-attachments/assets/d3e766eb-2330-4826-80bb-bcfac08b4503)
 
+### (OPTIONAL) Configure copy/paste functionality
+
+### Configure Internal IP Address
+
+Go to Settings > Network & Internet > change adaptor options.
+On each adaptor, Right click then go to Status > Details.
+One adaptor will have an address assigned by the DHCP server, such as 192.168.122.3, 10.0.3.20, etc.
+The other adaptor will have an address beginning with 169.254. This is the adaptor for
+the internal/isolated network. Since we removed the option for the adaptor to automatically
+obtain an ip address from the DHCP server, it was assigned a link-local address 169.254.x.x.
+A link-local address only allows connections with other machines on the local network, but does not
+allow external access to the internet.
+
+Name the adaptor with a normal ip address to `__EXTERNAL__` and the one with a link-local address
+to `__INTERNAL__`.
+
+1. `__INTERNAL__` > Properties > Internet Protocol Version 4
+2. Assign static IP:
+
+   IP address: `172.16.0.1`
+   Subnet mask: `255.255.255.0`
+
+3. Assign DNS as loopback address:
+
+   Preferred DNS server: `127.0.0.1`
+
+### Rename PC
+
+1. Right click the start menu
+2. Click on `System` > `Rename this PC`
+3. Rename to `DC`, which stands for "Domain Controller"
+4. `Next` > `Restart`
+
+### Installing & Configuring AD Domain Services
+
+1. Open `Server Manager`
+2. Under `Configure this local server` click `Add roles and features`
+3. In `Server Selection` & pick the server where you want to install, which for us there is only one option
+4. In `Server Roles` Add `Active Directory Domain Services`
+5. Click Next and then Install
+6. Click the flag icon on the top right and then click `Promote this server to a domain controller`
+7. In `Deployment Configuration` Check `Add a new forest` & Root domain name: `mydomain.com`
+8. In `Domain Controller Options` put same memorable password, then Install
+9. Login after restart to `MYDOMAIN\Administrator` account
+10. Click `START` > `Windows Administrative Tools` > `Active Directory Users and Computers`
+11. Right click `mydomain.com` > `New` > `Organizational Unit`
+12. Name it `_ADMINS` & uncheck `Protect container from accidental deletion`
+13. Right click `_ADMINS` > `New` > `User`
+14. Use your name & for logon name use `a-FirstInitialLastName` convention
+15. Same memorable password & uncheck `User must change password at next logon` & check `Password never expires` then `Finish`
+16. Right click new account > `Properties` > `Member Of` > `Add`
+17. Type `domain admins` in object names search then click `Check Names`
+18. Should resolve to `Domain Admins` then click `OK` > `Apply` > `OK`, then sign out
+19. Click the `Send Key` button on the top bar and `Ctl+Alt+Delete` then `Other user`
+20. Login with new domain admin account credentials
+
+### Installing & Configuring NAT and DHCP
+
+1. In `Server Manager` click `Add roles and features` & in `Server Roles` Add `Remote Access`
+2. In `Role Services` Add `Routing` (DirectAccess and VPN will be automatically added)
+3. After install click `Tools` > `Routing and Remote Access`
+4. Right click `DC (local)` > `Configure and Enable Routing and Remote Access`
+5. In `Configuration` check `Network address translation`
+6. In `NAT Internet Connection` check `_EXTERNAL_` (retry until it shows that option)
+7. Click `Add Roles and Features` & in `Server Roles` add `DHCP Server` & install
+8. After install click `Tools` > `DHCP` & you will see both IPv4/IPv6 are down
+9. Right click `IPv4` > `New Scope` & name it the IP range e.g. `172.16.0.100-200`
+10. Set ip address range, length, & subnet mask e.g. `172.16.0.100-200`, `24`, `255.255.255.0`
+11. You don't need to change anything for the excluded addresses or lease range
+12. Check `Yes` in `Configure DHCP Options`
+13. Enter domain controller ip `172.16.0.1` for default gateway & click `Add`
+14. Use domain controller as DNS server, with Parent domain: `mydomain.com` & IP address: `172.16.0.1`
+15. Skip over `WINS Server`
+16. Select `Yes` for `Activate Scope`
+17. Right click `dc.mydomain.com` > `Authorize` then `Refresh`
+
+### Creating Users in Active Directory using PowerShell
+
+1. Click `Configure this local server` switch `IE Enhanced Security Configuration` to `Off`
+2. Open Internet Explorer and paste link `https://github.com/joshmadekor1/AD_PS/archive/master.zip`
+3. Run `PowerShell ISE` as Administrator
+4. `Open Script` & open the PowerShell script
+5. In Terminal run this command:
+
+```powershell
+PS C:\Windows\system32> Set-ExecutionPolicy Unrestricted
+PS C:\Windows\system32> cd C:\users\a-tballada\desktop\AD_PS-master
+```
+
+6. Now that you are in the correct directory click play on the script
+
+### Creating & Configuring the Windows 10 Client Virtual Machine
+
+1. Add new vm with the windows 10 iso
+2. Make sure it's using the Internal Network Adaptor
+3. Select `I don't have a product key` & then select `Windows 10 Pro`
+4. Select `Custom install`
+5. Select `I don't have internet` & `Continue with limited setup` (Don't create Microsoft account)
+6. Name `user` & no password
+7. Make sure you can access the internet
+8. Right click `START` > `System` > `Rename this PC (advanced)` > `Change`
+9. Computer name: `CLIENT1` & Domain: `mydomain.com`
+10. Add either your domain or normal account to have permissions to join the domain & restart
+11. Now you can login to any of the users on the windows 10 machine
