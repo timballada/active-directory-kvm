@@ -41,7 +41,6 @@ sudo apt install virt-manager
 This is a very basic installation of the essential packages that allow running KVM and Virt-Manager.
 If this does not work on your system or you would like a different set of packages, these sources may help:
 
-- https://help.ubuntu.com/community/KVM/Installation
 - https://sysguides.com/install-kvm-on-linux
 - https://phoenixnap.com/kb/ubuntu-install-kvm
 
