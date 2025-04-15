@@ -194,7 +194,7 @@ password as this is just a lab. Click the `Send Key` button on the top bar and `
 
 ---
 
-### (OPTIONAL) Configure copy/paste functionality
+<--- ### (OPTIONAL) Configure copy/paste functionality --->
 
 ---
 
