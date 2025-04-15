@@ -266,7 +266,7 @@ to `__INTERNAL__`.
 4. `Open Script` & open the PowerShell script
 5. In Terminal run this command:
 
-```powershell
+```ps1
 PS C:\Windows\system32> Set-ExecutionPolicy Unrestricted
 PS C:\Windows\system32> cd C:\users\a-tballada\desktop\AD_PS-master
 ```
