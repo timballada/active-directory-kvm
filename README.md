@@ -293,10 +293,13 @@ to `__INTERNAL__`.
 ---
 
 1. Click `Configure this local server` switch `IE Enhanced Security Configuration` to `Off`
-2. Open Internet Explorer and paste link `https://github.com/joshmadekor1/AD_PS/archive/master.zip`
-3. Run `PowerShell ISE` as Administrator
-4. `Open Script` & open the PowerShell script
-5. In Terminal run these commands:
+2. Open Internet Explorer and paste this link(or just copy and paste the files into the VM):
+3. ```
+4. https://github.com/timballada/ad-make-users/archive/main.zip
+5. ```
+6. Run `PowerShell ISE` as Administrator
+7. `Open Script` & open the PowerShell script
+8. In Terminal run these commands:
 
 ```pwsh
 PS C:\Windows\system32> Set-ExecutionPolicy Unrestricted
