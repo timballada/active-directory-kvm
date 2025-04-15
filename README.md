@@ -1,7 +1,3 @@
-# Running Active Directory with KVM
-
-Include Brief Summary/Explanation
-
 # Active Directory Lab Using KVM Virtual Machines
 
 ## Overview
