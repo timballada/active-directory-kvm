@@ -293,7 +293,7 @@ to `__INTERNAL__`.
 ---
 
 1. Click `Configure this local server` switch `IE Enhanced Security Configuration` to `Off`
-2. Open Internet Explorer and paste this link to my repo(or just copy and paste the files into the VM):
+2. Open Internet Explorer and paste this link to my repo (or just copy and paste the files into the VM):
    https://github.com/timballada/ad-make-users/archive/main.zip
 
 3. Run `PowerShell ISE` as Administrator
