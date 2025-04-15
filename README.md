@@ -2,6 +2,124 @@
 
 Include Brief Summary/Explanation
 
+# Active Directory Lab Using KVM Virtual Machines
+
+## Overview
+This lab demonstrates how to deploy a complete **Active Directory (AD)** environment using **KVM virtual machines** on a Linux system (Ubuntu/Debian). By leveraging virtualization through **virt-manager**, this setup simulates a real-world Windows Server domain controller and Windows 10 client infrastructure entirely within a local Linux host.
+
+## Learning Objectives
+- Install and configure **KVM**, **libvirt**, and **virt-manager**
+- Create isolated and NAT-based virtual networks for AD communication
+- Install **Windows Server 2019** and promote it to a **Domain Controller**
+- Install **Active Directory Domain Services (AD DS)**, **DHCP**, and **NAT**
+- Create and manage AD users and Organizational Units (OUs)
+- Use **PowerShell** for Active Directory automation
+- Join a **Windows 10 client VM** to the domain
+
+## Lab Architecture Diagram
+```
+                          +--------------------+
+                          |   Linux Host (KVM) |
+                          +--------------------+
+                                     |
+                 +-------------------+-------------------+
+                 |                                       |
+      +------------------+                  +-------------------+
+      | Windows Server   |  <----> 172.16.0.1 (Internal NIC)    |
+      | 2019 (Domain     |                                     |
+      | Controller / DNS |                                     |
+      | DHCP / NAT)      |                                     |
+      +------------------+                  +-------------------+
+                 |                                       |
+        (External NAT)                             (Internal Isolated)
+                 |                                       |
+           Internet Access                     +--------------------+
+                                               | Windows 10 Client  |
+                                               | (Joined to Domain) |
+                                               +--------------------+
+```
+
+## Lab Summary
+
+### 1. Host Setup (Ubuntu/Debian)
+- Verify CPU virtualization support:
+  ```bash
+  egrep -c '(vmx|svm)' /proc/cpuinfo
+  ```
+- Install KVM and dependencies:
+  ```bash
+  sudo apt install bridge-utils cpu-checker libvirt-clients libvirt-daemon-system qemu-kvm virtinst
+  sudo apt install virt-manager
+  ```
+- Verify:
+  ```bash
+  kvm-ok
+  ```
+
+### 2. Configure Networking in Virt-Manager
+- Enable XML editing
+- Create a new **isolated network** named `internal-network`
+- Disable DHCP by editing the network's XML
+- Final XML should have no `<ip>` section
+
+### 3. Create and Configure Domain Controller VM
+- Install **Windows Server 2019**
+- Allocate sufficient resources (RAM, CPU, Disk)
+- Add two network interfaces:
+  - `NAT` (for internet)
+  - `internal-network` (for AD communication)
+- Configure internal NIC with static IP `172.16.0.1`
+- Rename PC to `DC`
+
+### 4. Install and Configure Active Directory
+- Add **Active Directory Domain Services** via Server Manager
+- Promote the server to a domain controller:
+  - New Forest: `mydomain.com`
+- Configure DNS: `127.0.0.1`
+- Create Organizational Units and Users
+- Add Domain Admin privileges
+
+### 5. Configure NAT and DHCP
+- Add **Remote Access** and enable NAT for `_EXTERNAL_` NIC
+- Add **DHCP Server** role
+- Create a DHCP scope: `172.16.0.100 - 172.16.0.200`
+- Set default gateway and DNS to `172.16.0.1`
+- Authorize the DHCP server
+
+### 6. Create AD Users via PowerShell
+- Download PowerShell script for bulk AD user creation
+- Set execution policy:
+  ```powershell
+  Set-ExecutionPolicy Unrestricted
+  ```
+- Run the script using PowerShell ISE
+
+### 7. Create and Configure Windows 10 Client
+- Install **Windows 10 Pro**
+- Connect to **internal-network**
+- Rename to `CLIENT1` and join domain: `mydomain.com`
+- Login with domain user created earlier
+
+---
+
+## Resources
+- [postmarketOS supported devices](https://wiki.postmarketos.org/wiki/Devices)
+- [Virt-Manager Documentation](https://virt-manager.org/)
+- [Active Directory Overview](https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/ad-ds-overview)
+
+---
+
+## Notes
+- Use descriptive VM names like `DC` and `CLIENT1` for clarity
+- Keep snapshot backups during setup phases
+- Ideal for IT students, sysadmins, or cybersecurity practice labs
+
+---
+
+Feel free to clone and extend this lab setup for Red Team/Blue Team or GPO automation practice!
+
+
+
 ---
 
 ### Initial Setup (Ubuntu/Debian):
