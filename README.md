@@ -181,7 +181,7 @@ the VMs.
 
 ![image](https://github.com/user-attachments/assets/6ad57a56-9ac5-4b6d-a909-80af53eb4bec)
 
-Select `Begin Installation` in the top right to launch the VM.
+Select `Begin Installation` in the top left to launch the VM.
 
 Click `Next` and `Install Now` then select either of the `Desktop Experience` OS options before continuing.
 
