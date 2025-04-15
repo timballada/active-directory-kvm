@@ -40,6 +40,11 @@ This lab demonstrates how to deploy a complete **Active Directory (AD)** environ
 
 ---
 
+Download these two iso images from the sites below:
+
+- [Windows Server 2019](https://www.microsoft.com/en-us/evalcenter/download-windows-server-2019)
+- [Windows 10](https://www.microsoft.com/en-us/software-download/windows10ISO)
+
 Verify CPU supports virtualization:
 
 ```sh
@@ -140,11 +145,6 @@ Click the `▶` button to reactivate the internal network.
 
 ---
 
-Download these two iso images from the sites below:
-
-- [Windows Server 2019](https://www.microsoft.com/en-us/evalcenter/download-windows-server-2019)
-- [Windows 10](https://www.microsoft.com/en-us/software-download/windows10ISO)
-
 
 In Virt-Manager, click the `create a new virtual machine` button and select local install, then find the iso file and select it:
 
@@ -194,7 +194,7 @@ password as this is just a lab. Click the `Send Key` button on the top bar and `
 
 ---
 
-<--- ### (OPTIONAL) Configure copy/paste functionality --->
+<!-- ### (OPTIONAL) Configure copy/paste functionality -->
 
 ---
 
