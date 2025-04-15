@@ -34,14 +34,6 @@ This lab demonstrates how to deploy a complete **Active Directory (AD)** environ
                                                | (Joined to Domain) |
                                                +--------------------+
 ```
-
-
-
-## Resources
-- [postmarketOS supported devices](https://wiki.postmarketos.org/wiki/Devices)
-- [Virt-Manager Documentation](https://virt-manager.org/)
-- [Active Directory Overview](https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/ad-ds-overview)
-
 ---
 
 ### Initial Setup (Ubuntu/Debian):
