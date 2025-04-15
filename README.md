@@ -264,11 +264,13 @@ to `__INTERNAL__`.
 2. Open Internet Explorer and paste link `https://github.com/joshmadekor1/AD_PS/archive/master.zip`
 3. Run `PowerShell ISE` as Administrator
 4. `Open Script` & open the PowerShell script
-5. In Terminal run this command:
+5. In Terminal run these commands:
 
 ```ps1
 PS C:\Windows\system32> Set-ExecutionPolicy Unrestricted
 PS C:\Windows\system32> cd C:\users\a-tballada\desktop\AD_PS-master
+PS C:\users\a-tballada\desktop\AD_PS-master> ls
+
 ```
 
 6. Now that you are in the correct directory click play on the script
