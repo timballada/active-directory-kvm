@@ -104,7 +104,7 @@ Click the `▶` button to reactivate the internal network.
 
 ---
 
-### Provisioning Virtual Machines
+### Creating & Configuring the Domain Controller Virtual Machine
 
 ---
 
@@ -113,8 +113,6 @@ Download these two iso images from the sites below:
 - [Windows Server 2019](https://www.microsoft.com/en-us/evalcenter/download-windows-server-2019)
 - [Windows 10](https://www.microsoft.com/en-us/software-download/windows10ISO)
 
-
-#### Windows Server 2019
 
 In Virt-Manager, click the `create a new virtual machine` button and select local install, then find the iso file and select it:
 
