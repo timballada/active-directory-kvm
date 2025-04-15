@@ -160,9 +160,15 @@ password as this is just a lab. Click the `Send Key` button on the top bar and `
 
 ![image](https://github.com/user-attachments/assets/d3e766eb-2330-4826-80bb-bcfac08b4503)
 
+---
+
 ### (OPTIONAL) Configure copy/paste functionality
 
+---
+
 ### Configure Internal IP Address
+
+---
 
 Go to Settings > Network & Internet > change adaptor options.
 On each adaptor, Right click then go to Status > Details.
@@ -186,14 +192,22 @@ to `__INTERNAL__`.
 
    Preferred DNS server: `127.0.0.1`
 
+---
+
 ### Rename PC
+
+---
 
 1. Right click the start menu
 2. Click on `System` > `Rename this PC`
 3. Rename to `DC`, which stands for "Domain Controller"
 4. `Next` > `Restart`
 
+---
+
 ### Installing & Configuring AD Domain Services
+
+---
 
 1. Open `Server Manager`
 2. Under `Configure this local server` click `Add roles and features`
@@ -216,7 +230,11 @@ to `__INTERNAL__`.
 19. Click the `Send Key` button on the top bar and `Ctl+Alt+Delete` then `Other user`
 20. Login with new domain admin account credentials
 
+---
+
 ### Installing & Configuring NAT and DHCP
+
+---
 
 1. In `Server Manager` click `Add roles and features` & in `Server Roles` Add `Remote Access`
 2. In `Role Services` Add `Routing` (DirectAccess and VPN will be automatically added)
@@ -236,7 +254,11 @@ to `__INTERNAL__`.
 16. Select `Yes` for `Activate Scope`
 17. Right click `dc.mydomain.com` > `Authorize` then `Refresh`
 
+---
+
 ### Creating Users in Active Directory using PowerShell
+
+---
 
 1. Click `Configure this local server` switch `IE Enhanced Security Configuration` to `Off`
 2. Open Internet Explorer and paste link `https://github.com/joshmadekor1/AD_PS/archive/master.zip`
@@ -251,7 +273,11 @@ PS C:\Windows\system32> cd C:\users\a-tballada\desktop\AD_PS-master
 
 6. Now that you are in the correct directory click play on the script
 
+---
+
 ### Creating & Configuring the Windows 10 Client Virtual Machine
+
+---
 
 1. Add new vm with the windows 10 iso
 2. Make sure it's using the Internal Network Adaptor
