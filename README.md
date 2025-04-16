@@ -214,20 +214,26 @@ to `__INTERNAL__`.
 
 ![image](https://github.com/user-attachments/assets/f2a10bd5-389c-45a5-bb22-ee8b363207c5)
 
-1. `__INTERNAL__` > Properties > Internet Protocol Version 4
-2. Assign static IP:
+`__INTERNAL__` > Properties > Internet Protocol Version 4
+
+Assign static IP:
 
    IP address: `172.16.0.1`
    Subnet mask: `255.255.255.0`
 
-3. Assign DNS as loopback address:
+Assign DNS as loopback address:
 
    Preferred DNS server: `127.0.0.1`
 
-1. Right click the start menu
-2. Click on `System` > `Rename this PC`
-3. Rename to `DC`, which stands for "Domain Controller"
-4. `Next` > `Restart`
+![image](https://github.com/user-attachments/assets/819a4dce-6324-4901-9e74-e2e093c6ba73)
+
+Right click the start menu
+
+Click on `System` > `Rename this PC`
+
+Rename to `DC`, which stands for "Domain Controller"
+
+`Next` > `Restart`
 
 ---
 
@@ -237,7 +243,7 @@ to `__INTERNAL__`.
 
 1. Open `Server Manager`
 2. Under `Configure this local server` click `Add roles and features`
-3. In `Server Selection` & pick the server where you want to install, which for us there is only one option
+3. In `Server Selection` pick the server where you want to install, which for us there is only one option
 4. In `Server Roles` Add `Active Directory Domain Services`
 5. Click Next and then Install
 6. Click the flag icon on the top right and then click `Promote this server to a domain controller`
