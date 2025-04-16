@@ -317,6 +317,7 @@ Rename to `DC`, which stands for "Domain Controller"
    **[Heres the actual repo if you want to view the two files](https://github.com/timballada/ad-make-users)**
 
 ![image](https://github.com/user-attachments/assets/fa377001-7748-4f81-8238-bddb0ee70916)
+
 ![image](https://github.com/user-attachments/assets/c5f02d39-882a-46bf-b894-91655312defa)
 
 
