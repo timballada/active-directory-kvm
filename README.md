@@ -318,7 +318,7 @@ Rename to `DC`, which stands for "Domain Controller"
 ![image](https://github.com/user-attachments/assets/c5f02d39-882a-46bf-b894-91655312defa)
 
 
-4. Run `PowerShell ISE` as Administrator
+4. Run `PowerShell ISE` as Administrator (Optional: Add your name to the random names txt file)
 5. `Open Script` & open the PowerShell script
 6. In Terminal run these commands:
 
@@ -349,4 +349,4 @@ PS C:\Windows\system32> cd C:\users\a-tballada\desktop\ad-make-users-main
 8. Right click `START` > `System` > `Rename this PC (advanced)` > `Change`
 9. Computer name: `CLIENT1` & Domain: `mydomain.com`
 10. Add either your domain or normal account to have permissions to join the domain & restart
-11. Now you can login to any of the users on the windows 10 machine
+11. Now you can login to any of the 500 created users on the windows 10 machine
