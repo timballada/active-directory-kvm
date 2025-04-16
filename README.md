@@ -324,12 +324,13 @@ Rename to `DC`, which stands for "Domain Controller"
 
 ```pwsh
 PS C:\Windows\system32> Set-ExecutionPolicy Unrestricted
-PS C:\Windows\system32> cd C:\users\a-tballada\desktop\AD_PS-master
-PS C:\users\a-tballada\desktop\AD_PS-master> ls
-
+PS C:\Windows\system32> cd C:\users\a-tballada\desktop\ad-make-users-main
 ```
 
-6. Now that you are in the correct directory click play on the script
+7. Now that you are in the correct directory click play on the script
+
+![image](https://github.com/user-attachments/assets/7b5a377e-18d6-4819-aac2-40770f685f92)
+
 
 ---
 
