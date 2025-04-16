@@ -357,4 +357,6 @@ PS C:\Windows\system32> cd C:\users\a-tballada\desktop\ad-make-users-main
 11. Now you can login to any of the 500 created users on the windows 10 machine
 
     ![image](https://github.com/user-attachments/assets/1df7af88-28e5-4420-9704-1bdac96f2275)
+![image](https://github.com/user-attachments/assets/babc607b-50ea-44ad-9a0a-c8f7fe10a68d)
+
 
