@@ -350,5 +350,8 @@ PS C:\Windows\system32> cd C:\users\a-tballada\desktop\ad-make-users-main
 7. Make sure you can access the internet
 8. Right click `START` > `System` > `Rename this PC (advanced)` > `Change`
 9. Computer name: `CLIENT1` & Domain: `mydomain.com`
+
+![image](https://github.com/user-attachments/assets/d471ee44-ccbd-4cc0-b530-8a36f3e6ffc4)
+
 10. Add either your domain or normal account to have permissions to join the domain & restart
 11. Now you can login to any of the 500 created users on the windows 10 machine
