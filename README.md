@@ -266,6 +266,9 @@ Rename to `DC`, which stands for "Domain Controller"
 19. Click the `Send Key` button on the top bar and `Ctl+Alt+Delete` then `Other user`
 20. Login with new domain admin account credentials
 
+    ![image](https://github.com/user-attachments/assets/90d1e533-05dc-4ded-a394-f455828bbfa6)
+
+
 ---
 
 ### Installing & Configuring NAT and DHCP
