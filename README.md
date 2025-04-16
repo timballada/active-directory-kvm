@@ -330,6 +330,7 @@ PS C:\Windows\system32> cd C:\users\a-tballada\desktop\ad-make-users-main
 7. Now that you are in the correct directory click play on the script
 
 ![image](https://github.com/user-attachments/assets/7b5a377e-18d6-4819-aac2-40770f685f92)
+![image](https://github.com/user-attachments/assets/1a3d939f-b210-47b8-834d-be2a4677e17f)
 
 
 ---
