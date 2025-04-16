@@ -245,7 +245,7 @@ Rename to `DC`, which stands for "Domain Controller"
 2. Under `Configure this local server` click `Add roles and features`
 3. In `Server Selection` pick the server where you want to install, which for us there is only one option
 4. In `Server Roles` Add `Active Directory Domain Services`
-5. Click Next and then Install
+5. Keep clicking Next and then Install
 6. Click the flag icon on the top right and then click `Promote this server to a domain controller`
 7. In `Deployment Configuration` Check `Add a new forest` & Root domain name: `mydomain.com`
 8. In `Domain Controller Options` put same memorable password, then Install
