@@ -259,7 +259,7 @@ Rename to `DC`, which stands for "Domain Controller"
   ![image](https://github.com/user-attachments/assets/79c3c99c-4a80-4e7a-85cb-90b3925e680e)
 
 15. Same memorable password & uncheck `User must change password at next logon` & check `Password never expires` then `Finish`
-16. Right click new account > `Properties` > `Member Of` > `Add`
+16. Right click the new account in _ADMINS then click `Properties` > `Member Of` > `Add`
 17. Type `domain admins` in object names search then click `Check Names`
 18. Should resolve to `Domain Admins` then click `OK` > `Apply` > `OK`, then sign out
 19. Click the `Send Key` button on the top bar and `Ctl+Alt+Delete` then `Other user`
