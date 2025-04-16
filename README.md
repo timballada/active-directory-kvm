@@ -310,12 +310,16 @@ Rename to `DC`, which stands for "Domain Controller"
 ---
 
 1. Click `Configure this local server` switch `IE Enhanced Security Configuration` to `Off`
-2. Open Internet Explorer and paste this link to my repo (or just copy and paste the files into the VM):
+2. Open Internet Explorer and search this link to my repo, then click open (It will probably give you a warning to download since it can't verify it's from a trusted source aka github):
    https://github.com/timballada/ad-make-users/archive/main.zip
 
-3. Run `PowerShell ISE` as Administrator
-4. `Open Script` & open the PowerShell script
-5. In Terminal run these commands:
+![image](https://github.com/user-attachments/assets/fa377001-7748-4f81-8238-bddb0ee70916)
+![image](https://github.com/user-attachments/assets/c5f02d39-882a-46bf-b894-91655312defa)
+
+
+4. Run `PowerShell ISE` as Administrator
+5. `Open Script` & open the PowerShell script
+6. In Terminal run these commands:
 
 ```pwsh
 PS C:\Windows\system32> Set-ExecutionPolicy Unrestricted
