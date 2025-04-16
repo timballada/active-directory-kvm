@@ -254,12 +254,12 @@ Rename to `DC`, which stands for "Domain Controller"
 11. Right click `mydomain.com` > `New` > `Organizational Unit`
 12. Name it `_ADMINS` & uncheck `Protect container from accidental deletion`
 13. Right click `_ADMINS` > `New` > `User`
-14. Use your name & for logon name use `a-FirstInitialLastName` convention
-    
-  ![image](https://github.com/user-attachments/assets/79c3c99c-4a80-4e7a-85cb-90b3925e680e)
-  ![image](https://github.com/user-attachments/assets/a9c7379b-595b-49f7-b466-9159a718891e)
-
+14. Use your name & for logon name use `a-FirstInitialLastName` convention    
 15. Same memorable password & uncheck `User must change password at next logon` & check `Password never expires` then `Finish`
+
+ ![image](https://github.com/user-attachments/assets/79c3c99c-4a80-4e7a-85cb-90b3925e680e)
+  ![image](https://github.com/user-attachments/assets/a9c7379b-595b-49f7-b466-9159a718891e)
+    
 16. Right click the new account in _ADMINS then click `Properties` > `Member Of` > `Add`
 17. Type `domain admins` in object names search then click `Check Names`
 18. Should resolve to `Domain Admins` then click `OK` > `Apply` > `OK`, then sign out
