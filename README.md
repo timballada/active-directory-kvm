@@ -310,7 +310,8 @@ Rename to `DC`, which stands for "Domain Controller"
 ---
 
 1. Click `Configure this local server` switch `IE Enhanced Security Configuration` to `Off`
-2. Open Internet Explorer and search this link to my repo, then click open (It will probably give you a warning to download since it can't verify it's from a trusted source aka github):
+2. Open Internet Explorer and search the below link to my repo with the powershell script & the txt file with 500 random names I generated, then click open (It will probably give you a warning to download since it can't verify it's from a trusted source aka github):
+
    https://github.com/timballada/ad-make-users/archive/main.zip
 
 ![image](https://github.com/user-attachments/assets/fa377001-7748-4f81-8238-bddb0ee70916)
