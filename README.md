@@ -355,3 +355,6 @@ PS C:\Windows\system32> cd C:\users\a-tballada\desktop\ad-make-users-main
 
 10. Add either your domain or normal account to have permissions to join the domain & restart
 11. Now you can login to any of the 500 created users on the windows 10 machine
+
+    ![image](https://github.com/user-attachments/assets/1df7af88-28e5-4420-9704-1bdac96f2275)
+
