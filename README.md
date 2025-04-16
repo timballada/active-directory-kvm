@@ -196,15 +196,13 @@ password as this is just a lab. Click the `Send Key` button on the top bar and `
 
 <!-- ### (OPTIONAL) Configure copy/paste functionality -->
 
----
-
-### Configure Internal IP Address
-
----
-
-Go to Settings > Network & Internet > change adaptor options.
+Go to Settings > Network & Internet > Change adaptor options.
 On each adaptor, Right click then go to Status > Details.
 One adaptor will have an address assigned by the DHCP server, such as 192.168.122.3, 10.0.3.20, etc.
+
+![image](https://github.com/user-attachments/assets/2c0982cc-1a3c-4625-866a-81f79801fe5c)
+![image](https://github.com/user-attachments/assets/73e9d42b-2cfb-4bca-89b5-c255ca4c827f)
+
 The other adaptor will have an address beginning with 169.254. This is the adaptor for
 the internal/isolated network. Since we removed the option for the adaptor to automatically
 obtain an ip address from the DHCP server, it was assigned a link-local address 169.254.x.x.
@@ -213,6 +211,8 @@ allow external access to the internet.
 
 Name the adaptor with a normal ip address to `__EXTERNAL__` and the one with a link-local address
 to `__INTERNAL__`.
+
+![image](https://github.com/user-attachments/assets/f2a10bd5-389c-45a5-bb22-ee8b363207c5)
 
 1. `__INTERNAL__` > Properties > Internet Protocol Version 4
 2. Assign static IP:
@@ -223,12 +223,6 @@ to `__INTERNAL__`.
 3. Assign DNS as loopback address:
 
    Preferred DNS server: `127.0.0.1`
-
----
-
-### Rename PC
-
----
 
 1. Right click the start menu
 2. Click on `System` > `Rename this PC`
