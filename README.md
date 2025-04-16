@@ -299,6 +299,9 @@ Rename to `DC`, which stands for "Domain Controller"
 15. Skip over `WINS Server`
 16. Select `Yes` for `Activate Scope`
 17. Right click `dc.mydomain.com` > `Authorize` then `Refresh`
+18. Both IPv4 & IPv6 should both be up now
+
+![image](https://github.com/user-attachments/assets/7c8b0efb-ea2f-4e1f-8e04-4760eceb688c)
 
 ---
 
