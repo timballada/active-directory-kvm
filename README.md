@@ -276,15 +276,22 @@ Rename to `DC`, which stands for "Domain Controller"
 ---
 
 1. In `Server Manager` click `Add roles and features` & in `Server Roles` Add `Remote Access`
-2. In `Role Services` Add `Routing` (DirectAccess and VPN will be automatically added)
+2. In `Role Services` Add `Routing` (DirectAccess and VPN will be automatically added) then click Next until install
+
+![image](https://github.com/user-attachments/assets/19f82369-ed65-4441-a6b6-dea669875f51)
+
 3. After install click `Tools` > `Routing and Remote Access`
 4. Right click `DC (local)` > `Configure and Enable Routing and Remote Access`
 5. In `Configuration` check `Network address translation`
-6. In `NAT Internet Connection` check `_EXTERNAL_` (retry until it shows that option)
+6. In `NAT Internet Connection` check `_EXTERNAL_` (retry until it shows that option) then Finish
+
+![image](https://github.com/user-attachments/assets/c7baeb76-aade-4273-87ed-ace151269d8a)
+   
 7. Click `Add Roles and Features` & in `Server Roles` add `DHCP Server` & install
-8. After install click `Tools` > `DHCP` & you will see both IPv4/IPv6 are down
+8. After install click `Tools` > `DHCP` & you will see both IPv4/IPv6 are down in `dc.mydomain.com`
 9. Right click `IPv4` > `New Scope` & name it the IP range e.g. `172.16.0.100-200`
-10. Set ip address range, length, & subnet mask e.g. `172.16.0.100-200`, `24`, `255.255.255.0`
+10. Set ip address range, length, & subnet mask e.g. `172.16.0.100-200`, `24`, `255.255.255.0`![image](https://github.com/user-attachments/assets/25a25651-927c-4c82-bd33-983bdcb4f031)
+
 11. You don't need to change anything for the excluded addresses or lease range
 12. Check `Yes` in `Configure DHCP Options`
 13. Enter domain controller ip `172.16.0.1` for default gateway & click `Add`
